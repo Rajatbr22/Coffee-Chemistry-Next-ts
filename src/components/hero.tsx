@@ -4,13 +4,28 @@ import Image from "next/image";
 import Link from "next/link";
 import { Button } from "./ui/button";
 import { Search, User, Heart, ShoppingCart } from "lucide-react";
+import { useState, useEffect } from "react";
 
 export default function Hero() {
+
+  const [imageSrc, setImageSrc] = useState('/images/coffee_image.webp');
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const screenWidth = window.innerWidth;
+      if (screenWidth < 678) {
+        setImageSrc('/images/hero1.webp');
+      } else {
+        setImageSrc('/images/coffee_image.webp');
+      }
+    }
+  }, []);
+
   return (
     <section className="relative h-screen w-full overflow-hidden">
       {/* Background Image */}
       <Image
-        src="/images/coffee_image.webp"
+        src={imageSrc}
         alt="Coffee background"
         fill
         className="h-fit object-cover object-center"
