@@ -13,7 +13,7 @@ export default function Hero() {
         src="/images/coffee_image.webp"
         alt="Coffee background"
         fill
-        className="object-cover object-center"
+        className="h-fit object-cover object-center"
         priority
         loading="eager"
       />
