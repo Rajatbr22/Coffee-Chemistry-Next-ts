@@ -111,9 +111,9 @@ const TestimonialSlider: React.FC = () => {
             </div>
 
             <div className="flex flex-col items-center mt-20 md:mt-28">
-              <h3 className="text-2xl font-semibold md:text-3xl md:font-bold text-[#5c3c10]">
+              <h5 className="text-2xl font-semibold md:text-3xl md:font-bold text-[#5c3c10]">
                 {testimonial.name}
-              </h3>
+              </h5>
               <p className="text-gray-600 mb-4">{testimonial.position}</p>
               <div className="h-20 w-20 md:w-40 md:h-40 relative overflow-hidden border-[#5c3c10]">
                 <Image
